@@ -1,18 +1,10 @@
 {
   "name": "@brainhart/scrubby",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Template project for writing node package with napi-rs",
   "main": "index.js",
-  "repository": "git@github.com:napi-rs/scrubby.git",
+  "repository": "git@github.com:brainhart/scrubby.git",
   "license": "MIT",
-  "keywords": [
-    "napi-rs",
-    "NAPI",
-    "N-API",
-    "Rust",
-    "node-addon",
-    "node-addon-api"
-  ],
   "files": [
     "index.d.ts",
     "index.js"
@@ -36,7 +28,7 @@
     }
   },
   "engines": {
-    "node": ">= 10"
+    "node": ">= 20"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
