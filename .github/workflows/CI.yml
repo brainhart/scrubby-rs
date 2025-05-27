@@ -11,8 +11,8 @@ permissions:
   push:
     branches:
       - main
-    tags-ignore:
-      - '**'
+    tags:
+      - 0.**
     paths-ignore:
       - '**/*.md'
       - LICENSE
@@ -445,7 +445,7 @@ jobs:
       - name: Publish
         run: |
           npm config set provenance true
-          if git log -1 --pretty=%B | grep "^[0-9]\+\.[0-9]\+\.[0-9]\+$";
+          if git log -1 --pretty=%B | grep "^v[0-9]\+\.[0-9]\+\.[0-9]\+$";
           then
             echo "//npm.pkg.github.com/:_authToken=$GITHUB_TOKEN" >> ~/.npmrc
             npm publish --registry=https://npm.pkg.github.com --access public
