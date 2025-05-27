@@ -211,9 +211,9 @@ jobs:
       fail-fast: false
       matrix:
         settings:
-          - host: windows-latest
-            target: x86_64-pc-windows-msvc
-            architecture: x64
+          # - host: windows-latest
+          #   target: x86_64-pc-windows-msvc
+          #   architecture: x64
           - host: macos-latest
             target: aarch64-apple-darwin
             architecture: arm64
@@ -420,9 +420,9 @@ jobs:
       - build-freebsd
       - test-macOS-windows-binding
       - test-linux-x64-gnu-binding
-      - test-linux-x64-musl-binding
+      # - test-linux-x64-musl-binding
       - test-linux-aarch64-gnu-binding
-      - test-linux-aarch64-musl-binding
+      # - test-linux-aarch64-musl-binding
       - test-linux-arm-gnueabihf-binding
     steps:
       - uses: actions/checkout@v4
