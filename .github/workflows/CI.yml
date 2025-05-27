@@ -11,8 +11,8 @@ permissions:
   push:
     branches:
       - main
-    tags-ignore:
-      - '**'
+    tags:
+      - v0.**
     paths-ignore:
       - '**/*.md'
       - LICENSE
