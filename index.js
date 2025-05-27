@@ -310,6 +310,8 @@ if (!nativeBinding) {
   throw new Error(`Failed to load native binding`)
 }
 
-const { plus100 } = nativeBinding
+const { CreditCardType, maskCreditCard, classifyCreditCard } = nativeBinding
 
-module.exports.plus100 = plus100
+module.exports.CreditCardType = CreditCardType
+module.exports.maskCreditCard = maskCreditCard
+module.exports.classifyCreditCard = classifyCreditCard
