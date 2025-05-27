@@ -82,7 +82,7 @@ function generateFormattedTestCases() {
     const dashFormatted = formatCreditCardNumber(number, type, '-')
     const miscPrefix = Math.random().toString(36).substring(2, 15)
     const miscSuffix = Math.random().toString(36).substring(2, 15)
-    const randomPrefixSuffix = `${miscPrefix}${number}${miscSuffix}`
+    const randomPrefixSuffix = `${miscPrefix} ${number} ${miscSuffix}`
 
     const len = number.length
     const first_four = number.slice(0, 4)
@@ -94,7 +94,7 @@ function generateFormattedTestCases() {
       { type, input: number, expected },
       { type, input: spaceFormatted, expected },
       { type, input: dashFormatted, expected },
-      { type, input: randomPrefixSuffix, expected: `${miscPrefix}${expected}${miscSuffix}` }
+      { type, input: randomPrefixSuffix, expected: `${miscPrefix} ${expected} ${miscSuffix}` }
     ]
   })
 }
